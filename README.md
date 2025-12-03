@@ -28,22 +28,6 @@
 *   `config`: Конфигурация безопасности (`SecurityConfig`).
 *   `exception`: Обработка исключений (`ResourceNotFoundException`).
 
-## Инструкция по запуску
-
-1.  **Сборка проекта:**
-    В корневой папке проекта выполните команду:
-    ```bash
-    mvn clean install
-    ```
-
-2.  **Запуск приложения:**
-    ```bash
-    mvn spring-boot:run
-    ```
-
-3.  **Доступ к приложению:**
-    *   API: `http://localhost:8080/api/tasks`
-    *   H2 Console: `http://localhost:8080/h2-console`
 
 ## Тестирование API
 
@@ -51,37 +35,6 @@
 *   **Username:** `admin`
 *   **Password:** `admin123`
 
-### 1. Получение списка всех задач (GET)
-**Запрос:** `GET /api/tasks`
-**Ответ:** Список задач в формате JSON.
-
-### 2. Создание новой задачи (POST)
-**Запрос:** `POST /api/tasks`
-**Body:**
-```json
-{
-  "title": "Изучить Spring Boot",
-  "description": "Прочитать документацию и сделать лабораторную",
-  "status": "In Progress"
-}
-```
-
-### 3. Получение задачи по ID (GET)
-**Запрос:** `GET /api/tasks/{id}`
-
-### 4. Обновление задачи (PUT)
-**Запрос:** `PUT /api/tasks/{id}`
-**Body:**
-```json
-{
-  "title": "Изучить Spring Boot (Updated)",
-  "description": "Лабораторная сдана",
-  "status": "Completed"
-}
-```
-
-### 5. Удаление задачи (DELETE)
-**Запрос:** `DELETE /api/tasks/{id}`
 
 ## Работа с базой данных (H2 Console)
 Для проверки данных можно использовать встроенную консоль H2.
